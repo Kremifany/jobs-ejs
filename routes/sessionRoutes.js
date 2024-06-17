@@ -15,13 +15,10 @@ router
   .get(logonShow)
   .post(
     passport.authenticate("local", {
-      successRedirect: "/sessions/logon",
+      successRedirect: "/secretWord",
       failureRedirect: "/sessions/logon",
       failureFlash: true,
     })
-    // (req, res) => {
-    //   res.send("Not yet implemented.");
-    // }
   );
 router.route("/logoff").post(logoff);
 

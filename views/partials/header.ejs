@@ -7,16 +7,18 @@
 <% } %>
 <% if (errors) {
     errors.forEach((err) => { %>
-      <div>
+      <p>
         Error: <%= err %>
-      </div>
+      </p>
     <% })
   } %>
   <% if (info) {
     info.forEach((msg) => { %>
-      <div>
+      <p>
         Info: <%= msg %>
-      </div>
+      </p>
     <% })
   } %>
-<hr />
+<% if ((errors && errors.length) || (info && info.length)) { %>
+    <hr />	
+<% } %>
